@@ -31,9 +31,9 @@ def connect(address):
 if __name__ == "__main__":
     try:
         host = "192.168.1.7"
-        port = 4444
+        port = 1234
     except socket.error as e:
-        if socket.error.errno == 98:
+        if e.errno == 98:
             host = "127.0.0.1"
-            port = 1234
+            port = 4444
     connect((host, port))
