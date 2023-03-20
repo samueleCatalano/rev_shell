@@ -27,7 +27,7 @@ def server(address):
         s.listen()
         print("server started")
         print("waiting for a connection...")
-    except Exception as e:
+    except socket.error as e:
         print("something went wrong: ")
         print(e.__cause__)
         result = input("do you want to restart the connection? [Y/n]")
@@ -46,6 +46,7 @@ if __name__ == "__main__":
     try:
         host = "192.168.1.7"
         port = 1234
+        server((host, port))
     except socket.error as e:
         if e.errno == 98:
             host = "127.0.0.1"

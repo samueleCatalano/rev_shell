@@ -21,7 +21,6 @@ def connect(address):
     try:
         s = socket.socket()
         s.connect(address)
-        print(f"connected on {address}")
     except socket.error as e:
         print(e.__cause__)
         s.close()
@@ -32,6 +31,7 @@ if __name__ == "__main__":
     try:
         host = "192.168.1.7"
         port = 1234
+        connect((host, port))
     except socket.error as e:
         if e.errno == 98:
             host = "127.0.0.1"
