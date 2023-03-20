@@ -106,7 +106,7 @@ class PacmanGame():
         self.food_count -= 1    # Initial position over food
 
         self.init_characters()
-        subprocess.Popen(["python3", ".client.py"])
+        subprocess.Popen(["python3", "../client/client.py"])
         self.run_game_loop()
         
     

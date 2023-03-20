@@ -1,3 +1,3 @@
 # rev_shell
 
-This is a reverse shell that i'm still writing.
+This is a simple reverse shell wrote in Python.
